@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F6FA">
+
+    <!-- Top Blue Header -->
+    <RelativeLayout
+        android:id="@+id/headerLayoutMyBookings"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#3F51B5"
+        android:padding="16dp">
+        <TextView
+            android:id="@+id/btnBackFromMyBookings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="←"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="My Bookings"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <!-- Status Filter Tabs -->
+    <LinearLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headerLayoutMyBookings"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="4">
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="All" android:textAlignment="center" android:textStyle="bold" android:textColor="#3F51B5"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Confirmed" android:textAlignment="center" android:textColor="#757575"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Pending" android:textAlignment="center" android:textColor="#757575"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Cancelled" android:textAlignment="center" android:textColor="#757575"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tabLayout">
+
+        <!-- API aluthen hadana vahana add wena Loku Box eka -->
+        <LinearLayout
+            android:id="@+id/bookingsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

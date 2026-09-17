@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#152A4A"> <!-- Dark blue main background -->
+
+    <!-- Faded car image in the background -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/splash_bg"
+        android:scaleType="centerCrop"
+        android:alpha="0.2" /> <!-- 0.2 is the opacity level to make the image blend in -->
+
+    <!-- Center the icon and text on the screen -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- White car icon -->
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ic_car"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Main app name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rent A Vehicle"
+            android:textColor="#FFFFFF"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Drive Your Journey"
+            android:textColor="#D3D3D3"
+            android:textSize="17sp"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

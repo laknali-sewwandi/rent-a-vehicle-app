@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal"
+    android:background="#FFFFFF">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Admin Panel - Add Vehicle"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#3F51B5"
+        android:layout_marginBottom="32dp" />
+
+    <!-- Vehicle Name -->
+    <EditText
+        android:id="@+id/etVehicleName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Vehicle Name (e.g. Toyota Axio)"
+        android:textColor="#000000"
+        android:textColorHint="#888888"
+        android:background="@android:drawable/editbox_background_normal"
+        android:paddingStart="12dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Vehicle Type Spinner -->
+    <Spinner
+        android:id="@+id/spinnerVehicleType"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:drawable/editbox_background_normal"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Price Per Day -->
+    <EditText
+        android:id="@+id/etPrice"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Price Per Day (e.g. 7000)"
+        android:inputType="number"
+        android:textColor="#000000"
+        android:textColorHint="#888888"
+        android:background="@android:drawable/editbox_background_normal"
+        android:paddingStart="12dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Details -->
+    <EditText
+        android:id="@+id/etDetails"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Details (e.g. Auto, A/C, 4 Seats)"
+        android:textColor="#000000"
+        android:textColorHint="#888888"
+        android:background="@android:drawable/editbox_background_normal"
+        android:paddingStart="12dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Image URL -->
+    <EditText
+        android:id="@+id/etImageUrl"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Image URL or Name"
+        android:textColor="#000000"
+        android:textColorHint="#888888"
+        android:background="@android:drawable/editbox_background_normal"
+        android:paddingStart="12dp"
+        android:layout_marginBottom="32dp" />
+
+    <!-- Add Button -->
+    <Button
+        android:id="@+id/btnAddVehicle"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="Add Vehicle to Database"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:backgroundTint="#3F51B5" />
+
+    <!-- View Bookings Button (අලුතින් දැම්ම එක) -->
+    <Button
+        android:id="@+id/btnViewBookings"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:text="View Customer Bookings"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:backgroundTint="#FF9800" />
+
+    <!-- Navigation Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btnGoHome"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:text="Go Home"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#4CAF50"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:text="Logout"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#F44336"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+</LinearLayout>

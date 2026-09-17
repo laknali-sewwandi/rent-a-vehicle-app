@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "776363355895",
+    "project_id": "rent-a-vehicle-c111b",
+    "storage_bucket": "rent-a-vehicle-c111b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:776363355895:android:6b4af8bcdaaad86f50edf2",
+        "android_client_info": {
+          "package_name": "com.example.rentavehicle"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKX4jTBoDkySPnP2eix6AxuOpFcyLh-5g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- Top Blue Header -->
+    <RelativeLayout
+        android:id="@+id/headerLayoutDetails"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#3F51B5"
+        android:padding="16dp">
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="←"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Vehicle Details"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:text="♡"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/headerLayoutDetails"
+        android:layout_above="@+id/btnBookNow">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/detailImageView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/prius_car"
+                android:scaleType="fitCenter"
+                android:layout_marginBottom="20dp"/>
+
+            <TextView
+                android:id="@+id/detailNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Toyota Prius"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/detailTypeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Car"
+                android:textColor="#757575"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/detailPriceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rs. 8,000 / day"
+                android:textColor="#3F51B5"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- Icons Row with New IDs -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="👨‍👩‍👧‍👦" android:textSize="24sp"/>
+                    <TextView android:id="@+id/tvSeats" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5\nSeats" android:textAlignment="center" android:textSize="12sp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="⚙️" android:textSize="24sp"/>
+                    <TextView android:id="@+id/tvTrans" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Auto\nTrans." android:textAlignment="center" android:textSize="12sp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="⛽" android:textSize="24sp"/>
+                    <TextView android:id="@+id/tvFuel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Petrol\nFuel" android:textAlignment="center" android:textSize="12sp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📅" android:textSize="24sp"/>
+                    <TextView android:id="@+id/tvYear" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2018\nYear" android:textAlignment="center" android:textSize="12sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vehicle Description will appear here."
+                android:textColor="#757575"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnBookNow"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:backgroundTint="#3F51B5"
+        android:text="Book Now"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+</RelativeLayout>

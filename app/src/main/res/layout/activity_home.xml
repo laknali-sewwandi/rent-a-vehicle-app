@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F6FA">
+
+    <!-- Top Blue Header -->
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3F51B5"
+        android:orientation="vertical"
+        android:padding="20dp">
+        <TextView
+            android:id="@+id/tvWelcomeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello, User! 👋"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Find the best vehicle for you"
+            android:textColor="#E0E0E0"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
+        android:elevation="8dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="🏠 Home"
+            android:textColor="#3F51B5"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/navBookings"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="📅 Bookings"
+            android:textColor="#757575" />
+        <TextView
+            android:id="@+id/navProfile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="👤 Profile"
+            android:textColor="#757575" />
+    </LinearLayout>
+
+    <!-- Scrollable Middle Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNav"
+        android:layout_below="@id/headerLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Search Bar -->
+            <EditText
+                android:id="@+id/searchEditText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#FFFFFF"
+                android:hint="🔍 Search vehicle..."
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:layout_marginBottom="20dp"
+                android:elevation="2dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Available Vehicles"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:layout_marginBottom="15dp"/>
+
+            <!-- 1. Toyota Prius Card (Car) -->
+            <RelativeLayout
+                android:id="@+id/layoutPrius"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:padding="12dp"
+                android:elevation="3dp"
+                android:layout_marginBottom="15dp">
+                <ImageView
+                    android:id="@+id/imgPrius"
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/prius_car" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toEndOf="@id/imgPrius"
+                    android:layout_marginStart="15dp">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Toyota Prius" android:textColor="#000000" android:textSize="16sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="♡" android:textSize="20sp" />
+                    </RelativeLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Car" android:textColor="#757575" android:textSize="12sp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rs. 8,000 / day" android:textColor="#3F51B5" android:textStyle="bold" android:layout_marginTop="2dp" android:layout_marginBottom="8dp"/>
+                    <Button android:id="@+id/btnViewDetailsPrius" android:layout_width="120dp" android:layout_height="35dp" android:backgroundTint="#3F51B5" android:text="View Details" android:textAllCaps="false" android:textColor="#FFFFFF" android:textSize="12sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!-- 2. Toyota KDH Card (Van) -->
+            <RelativeLayout
+                android:id="@+id/layoutKdh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:padding="12dp"
+                android:elevation="3dp"
+                android:layout_marginBottom="15dp">
+                <ImageView
+                    android:id="@+id/imgKdh"
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/kdh" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toEndOf="@id/imgKdh"
+                    android:layout_marginStart="15dp">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Toyota KDH" android:textColor="#000000" android:textSize="16sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="♡" android:textSize="20sp" />
+                    </RelativeLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Van" android:textColor="#757575" android:textSize="12sp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rs. 15,000 / day" android:textColor="#3F51B5" android:textStyle="bold" android:layout_marginTop="2dp" android:layout_marginBottom="8dp"/>
+                    <Button android:id="@+id/btnViewDetailsKdh" android:layout_width="120dp" android:layout_height="35dp" android:backgroundTint="#3F51B5" android:text="View Details" android:textAllCaps="false" android:textColor="#FFFFFF" android:textSize="12sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!-- 3. Yamaha FZ Card (Bike 1) -->
+            <RelativeLayout
+                android:id="@+id/layoutFz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:padding="12dp"
+                android:elevation="3dp"
+                android:layout_marginBottom="15dp">
+                <ImageView
+                    android:id="@+id/imgFz"
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/fz" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toEndOf="@id/imgFz"
+                    android:layout_marginStart="15dp">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Yamaha FZ" android:textColor="#000000" android:textSize="16sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="♡" android:textSize="20sp" />
+                    </RelativeLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Bike" android:textColor="#757575" android:textSize="12sp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rs. 3,500 / day" android:textColor="#3F51B5" android:textStyle="bold" android:layout_marginTop="2dp" android:layout_marginBottom="8dp"/>
+                    <Button android:id="@+id/btnViewDetailsFz" android:layout_width="120dp" android:layout_height="35dp" android:backgroundTint="#3F51B5" android:text="View Details" android:textAllCaps="false" android:textColor="#FFFFFF" android:textSize="12sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!-- 4. Honda Dio Card (Bike 2) -->
+            <RelativeLayout
+                android:id="@+id/layoutDio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:padding="12dp"
+                android:elevation="3dp"
+                android:layout_marginBottom="15dp">
+                <ImageView
+                    android:id="@+id/imgDio"
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/dio" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toEndOf="@id/imgDio"
+                    android:layout_marginStart="15dp">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Honda Dio" android:textColor="#000000" android:textSize="16sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="♡" android:textSize="20sp" />
+                    </RelativeLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Scooter" android:textColor="#757575" android:textSize="12sp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rs. 2,500 / day" android:textColor="#3F51B5" android:textStyle="bold" android:layout_marginTop="2dp" android:layout_marginBottom="8dp"/>
+                    <Button android:id="@+id/btnViewDetailsDio" android:layout_width="120dp" android:layout_height="35dp" android:backgroundTint="#3F51B5" android:text="View Details" android:textAllCaps="false" android:textColor="#FFFFFF" android:textSize="12sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!-- මෙන්න මේ කොටස තමයි අපි අලුතින් එකතු කළේ Database වාහන පෙන්වන්න -->
+            <LinearLayout
+                android:id="@+id/dynamicVehiclesContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
